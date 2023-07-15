@@ -168,6 +168,7 @@ body {
     margin: 0 auto;
   }
   */
+  padding: 0 50px;
 }
 .grid-1-col {
   display: grid;
@@ -311,6 +312,9 @@ body {
     height: 400px;
   }
 }
+.section-welcome-left-content {
+  position: relative;
+}
 @media (max-width: 800px) {
   .section-welcome-left-content {
     text-align: center;
@@ -329,6 +333,11 @@ body {
   box-sizing: border-box;
   position: absolute;
   width: 100%;
+}
+
+.section-welcome-navigation a {
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 800px) {
@@ -364,7 +373,6 @@ body {
 .section-offer-h {
   color: white;
   font-size: 7rem;
-  width: 75%;
   line-height: 7.5rem;
   margin: 0 auto;
   text-align: center;
@@ -398,6 +406,7 @@ body {
 .section-offer-imgs {
   position: relative;
   height: 100%;
+  margin: 0 -50px;
   margin-top: 60px;
 }
 .section-offer-imgs-exterior {
@@ -469,6 +478,7 @@ body {
   color: #1e4d60;
   font-weight: 800;
   font-style: normal;
+  margin-top: 50px;
 }
 @media (max-width: 800px) {
   .section-attractions-header {
