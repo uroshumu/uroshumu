@@ -715,10 +715,47 @@ body {
   width: 300px;
 }
 @media (max-width: 800px) {
+  .section-rooms .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 100px;
+  }
   .section-rooms-star {
     top: 50%;
     transform: translate(-50%, -60%);
     width: 50%;
+  }
+  .section-rooms-item-slide {
+    flex-direction: column;
+  }
+  .section-rooms-item-img {
+  }
+  .section-rooms-img {
+    max-width: 100%;
+    height: auto;
+  }
+  .section-rooms-item-text {
+  }
+  .section-rooms-small-header {
+    margin-top: 70px;
+  }
+  .section-rooms-item {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .section-rooms-arrow {
+    height: 10px;
+    width: 150px;
+  }
+  .section-rooms-arrow-1 {
+    left: -6rem;
+  }
+  .section-rooms-arrow-2 {
+    margin-right: -6rem;
+    margin-bottom: -15rem;
+  }
+  .section-rooms-star {
+    transform: translate(-85%, -50%);
   }
 }
 
