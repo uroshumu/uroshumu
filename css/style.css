@@ -336,7 +336,7 @@ body {
     width: 110%;
     background-image: url(../img/background.jpg);
     background-size: cover;
-    /* transform: translate(105%, 0); */
+    transform: translateX(105%);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
