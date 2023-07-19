@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="section-welcome-right 
-          visible-nav
+          
           ">
             <nav class="section-welcome-navigation ">
               <a href="#" class="section-welcome-nav-item">The digs</a>
@@ -532,16 +532,16 @@
 
     btn.addEventListener("click", function() {
         // Provera da li paragraf ima klasu "crveni"
-        if (right.classList.contains("visible-nav")) {
+        // if (right.classList.contains("visible-nav")) {
             // Ako ima, ukloni je
-            right.classList.remove("visible-nav");
-        } else {
+        //     right.classList.remove("visible-nav");
+        // } else {
             // Ako nema, dodaj je
-            right.classList.add("visible-nav");
-        }
+        //     right.classList.add("visible-nav");
+        // }
 
         // Uvećaj font ako nema klasu "veliki", inače je ukloni
-        // paragraf.classList.toggle("veliki");
+        right.classList.toggle("visible-nav");
     });
 });
 
