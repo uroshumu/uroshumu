@@ -310,6 +310,7 @@ body {
 @media (max-width: 800px) {
   .section-welcome-right {
     height: 400px;
+    width: 100vw;
   }
 }
 .section-welcome-left-content {
@@ -332,10 +333,12 @@ body {
     transition: all 0.5s ease-in;
 
     z-index: 10;
-    height: 80vh;
-    width: 110%;
+    height: 100vh;
+    width: 100vw;
+
     background-image: url(../img/background.jpg);
     background-size: cover;
+
     transform: translateX(105%);
     opacity: 0;
     pointer-events: none;
@@ -421,7 +424,7 @@ body {
   padding-bottom: 15%;
 }
 .section-offer-text {
-  z-index: 200;
+  z-index: 2;
   position: relative;
 }
 .section-offer-h {
@@ -450,7 +453,7 @@ body {
   font-size: 2rem;
   width: 75%;
   text-align: center;
-  z-index: 200;
+  z-index: 2;
   margin: 0 auto;
 }
 @media (max-width: 800px) {
@@ -465,7 +468,7 @@ body {
 }
 .section-offer-imgs-exterior {
   width: 100%;
-  z-index: 10;
+  z-index: 1;
   height: 360px;
   object-fit: cover;
 }
