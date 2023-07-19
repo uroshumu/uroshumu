@@ -142,6 +142,7 @@ html {
   font-size: 62.5%;
   /* font-family: "Codec Pro";
   */
+  overflow-x: hidden;
 }
 @media (max-width: 1200px) {
   html {
@@ -150,6 +151,7 @@ html {
 }
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 body {
   /* font-weight: 500;
@@ -313,7 +315,66 @@ body {
 .section-welcome-left-content {
   position: relative;
 }
+
+.btn-mobile-nav {
+  visibility: hidden;
+}
+
 @media (max-width: 800px) {
+  .section-welcome-navigation {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+
+    transition: all 0.5s ease-in;
+
+    z-index: 10;
+    height: 80vh;
+    width: 110%;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    /* transform: translate(105%, 0); */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .visible-nav .section-welcome-navigation {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .section-welcome-nav-item {
+    font-size: 4rem;
+  }
+  .btn-mobile-nav {
+    display: block;
+    visibility: visible;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    left: 5rem;
+    top: 5rem;
+    cursor: pointer;
+    z-index: 11;
+  }
+
+  .visible-nav .btn-mobile-nav-menu {
+    display: none;
+  }
+  .btn-mobile-nav-close {
+    display: none;
+  }
+  .visible-nav .btn-mobile-nav-close {
+    display: block;
+    z-index: 11;
+  }
+
   .section-welcome-left-content {
     text-align: center;
     padding-bottom: 50px;
@@ -338,11 +399,6 @@ body {
   color: white;
 }
 
-@media (max-width: 800px) {
-  .section-welcome-navigation {
-    visibility: hidden;
-  }
-}
 .section-welcome-logo {
   width: 75%;
   margin: 0 auto;
