@@ -12,7 +12,25 @@
     <title> </title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+
+      <div class="container">
+        <div class="wrap">
+
+          <img src="img/logo.svg" class="logo" />
+          <nav class="navigation">
+            <a href="#">The digs</a>
+            <a href="#">Local Attraction</a>
+            <a href="#">Motel Amentites</a>
+            <a href="#">Rooms</a>
+            <a href="#">Cabins</a>
+            <a href="#">Local Fun</a>
+          </nav>
+
+        </div>
+      </div>
+
+    </header>
 
     <main>
 
@@ -28,15 +46,7 @@
             </div>
           </div>
           <div class="section-welcome-right">
-            <nav class="section-welcome-navigation">
-              <a href="#">The digs</a>
-              <a href="#">Local Attraction</a>
-              <a href="#">Motel Amentites</a>
-              <a href="#">Rooms</a>
-              <a href="#">Cabins</a>
-              <a href="#">Local Fun</a>
-            </nav>
-            <img src="img/logo.svg" class="section-welcome-logo" />
+            
           </div>
         </div>
         
@@ -203,7 +213,6 @@
               >
               <ul class="section-rooms-list">
                 <li class="section-rooms-item">One Queen Bed</li>
-                <li class="section-rooms-item">Minibar</li>
                 <li class="section-rooms-item">Microwave</li>
                 <li class="section-rooms-item">Coffee Machine</li>
                 <li class="section-rooms-item">Bathroom w/ Full Tub</li>
@@ -222,7 +231,6 @@
               <ul class="section-rooms-list">
                 <li class="section-rooms-item">Two Queen Beds</li>
                 <li class="section-rooms-item">Futon</li>
-                <li class="section-rooms-item">Minibar</li>
                 <li class="section-rooms-item">Microwave</li>
                 <li class="section-rooms-item">Range with Oven</li>
                 <li class="section-rooms-item">Coffee Machine</li>
@@ -263,7 +271,6 @@
                         <h9 class="section-rooms-small-header">Motel Room with one Queen Bed</h9>
                         <ul class="section-rooms-list">
                           <li class="section-rooms-item">One Queen Bed</li>
-                          <li class="section-rooms-item">Minibar</li>
                           <li class="section-rooms-item">Microwave</li>
                           <li class="section-rooms-item">Coffee Machine</li>
                           <li class="section-rooms-item">Bathroom w/ Full Tub</li>
@@ -282,7 +289,6 @@
                         <h9 class="section-rooms-small-header">Motel Room with one Queen Bed</h9>
                         <ul class="section-rooms-list">
                           <li class="section-rooms-item">One Queen Bed</li>
-                          <li class="section-rooms-item">Minibar</li>
                           <li class="section-rooms-item">Microwave</li>
                           <li class="section-rooms-item">Coffee Machine</li>
                           <li class="section-rooms-item">Bathroom w/ Full Tub</li>
@@ -301,7 +307,6 @@
                         <h9 class="section-rooms-small-header">Motel Room with one Queen Bed</h9>
                         <ul class="section-rooms-list">
                           <li class="section-rooms-item">One Queen Bed</li>
-                          <li class="section-rooms-item">Minibar</li>
                           <li class="section-rooms-item">Microwave</li>
                           <li class="section-rooms-item">Coffee Machine</li>
                           <li class="section-rooms-item">Bathroom w/ Full Tub</li>
@@ -337,7 +342,6 @@
                         <ul class="section-rooms-list">
                           <li class="section-rooms-item">Two Queen Beds</li>
                 <li class="section-rooms-item">Futon</li>
-                <li class="section-rooms-item">Minibar</li>
                 <li class="section-rooms-item">Microwave</li>
                 <li class="section-rooms-item">Range with Oven</li>
                 <li class="section-rooms-item">Coffee Machine</li>
@@ -358,7 +362,6 @@
                         <ul class="section-rooms-list">
                           <li class="section-rooms-item">Two Queen Beds</li>
                 <li class="section-rooms-item">Futon</li>
-                <li class="section-rooms-item">Minibar</li>
                 <li class="section-rooms-item">Microwave</li>
                 <li class="section-rooms-item">Range with Oven</li>
                 <li class="section-rooms-item">Coffee Machine</li>
@@ -379,7 +382,6 @@
                         <ul class="section-rooms-list">
                           <li class="section-rooms-item">Two Queen Beds</li>
                 <li class="section-rooms-item">Futon</li>
-                <li class="section-rooms-item">Minibar</li>
                 <li class="section-rooms-item">Microwave</li>
                 <li class="section-rooms-item">Range with Oven</li>
                 <li class="section-rooms-item">Coffee Machine</li>
@@ -493,6 +495,14 @@
     <script>
 
 
+      // On page scroll add class to header, to make it opaque, hide when on top
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400){
+          document.querySelector('.header').classList.add('opaque');
+        } else {
+          document.querySelector('.header').classList.remove('opaque');
+        }
+      });
 
       for (let item of document.querySelectorAll(".mySwiper")){
 

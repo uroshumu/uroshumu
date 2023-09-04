@@ -219,7 +219,7 @@ body {
 .section-welcome .container {
   align-items: center;
   justify-items: center;
-  height: 750px;
+  height: 850px;
   display: grid;
   grid-template-columns: 39% 1fr;
 }
@@ -319,23 +319,54 @@ body {
     padding-bottom: 50px;
   }
 }
-.section-welcome-navigation {
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease-in-out;
+
+}
+
+@media (max-width: 800px) {
+  header {
+    display: none;
+  }
+}
+
+header.opaque {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+header.opaque nav a {
+  color: #264653;
+}
+header .wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px 0;
+}
+header nav {
   font-size: 1.6rem;
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
   color: white;
-  padding-top: 4rem;
-  padding-left: 3rem;
+  padding-left: 10rem;
   box-sizing: border-box;
-  position: absolute;
-  width: 100%;
+  flex: 1;
+}
+header .logo {
+  height: 100px;
 }
 
-.section-welcome-navigation a {
+header nav  a {
   text-decoration: none;
   color: white;
+  padding: 0 15px;
+  transition: color 0.3s ease-in-out;
 }
 
 @media (max-width: 800px) {
@@ -654,6 +685,7 @@ body {
   position: relative;
   background: #2a9d8f;
   position: relative;
+  overflow: hidden;
 }
 .section-rooms .container {
   position: relative;
@@ -834,7 +866,10 @@ body {
   transform: scaleX(-1) scale(1.1);
 }
 /* section local fun */
-.section-local-fun-header {
+.section-local-fun{
+  padding-bottom: 60px;
+}
+.section-local-fun-header { 
   display: flex;
   justify-content: center;
   gap: 2rem;
