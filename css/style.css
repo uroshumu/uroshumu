@@ -1055,7 +1055,7 @@ header nav  a {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 60px;
   font-weight: 800;
   font-style: normal;
 }
@@ -1084,16 +1084,24 @@ header nav  a {
   color: black;
   font-weight: 400;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 3rem;
 }
 .section-local-fun-p {
   text-align: center;
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: black;
   font-weight: 300;
   width: 75%;
+  
+}
+
+
+@media (max-width: 600px) {
+  .section-local-fun-p {
+    width: 100%;
+  }
 }
 /* section book poslednja sekcija */
 .section-book {
@@ -1272,4 +1280,223 @@ header nav  a {
   align-content: center;
   justify-content: center;
   width: 50px;
+}
+
+.lf-title-bar{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+
+.lf-title{ 
+  font-size: 4em;
+  font-weight: 500;
+  position: relative;
+  display: inline-flex;
+}
+
+.lf-title::after{ 
+  position: absolute;
+  top: -20px;
+  right: -40px;
+  width: 50px;
+  height: 50px;
+  content: "";
+  background: url("../img/star-single.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+}
+
+.lf-title.yellow{ 
+  color: #efb360;
+}
+
+.lf-title.green{ 
+  color: #2a9d8f;
+}
+
+.lf-title.green-g2{ 
+  color: #7aa782;
+}
+
+.lf-title.orange{ 
+  color: #e87854;
+}
+
+.lf-title-bar .button{ 
+  height: 45px;
+  padding: 0 30px;
+  border-radius: 25px;
+  background: #2a9d8f; 
+  display: inline-flex;
+  line-height: 45px;
+  font-size: 1.4em;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lf-title-bar.center{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+
+.lf-row.c3{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+@media (max-width: 950px) {
+  .lf-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lf-row{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+}
+
+#local-fun .container{
+  position: relative;
+}
+
+.lf-bg{
+  position: absolute;
+  width: 500px;
+}
+
+.lf-bg.l1{
+  right: 70px;
+  top: -120px;
+  z-index: -1;
+}
+
+.lf-bg.l2{
+  right: 40%;
+  top: 360px;
+  z-index: -1;
+}
+
+.lf-bg.l3{
+  right: 20%;
+  top: 1000px;
+  z-index: -1;
+}
+
+.lf-row .col img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.lf-row .col {
+  text-align: center;
+  text-decoration: none;
+}
+
+.lf-row .col .title{
+  color: black;
+  font-size: 2.2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.lf-row .col .title{
+  color: black;
+  font-size: 2.2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.lf-row .col p{
+  color: black;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.lf-aside {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.lf-aside .image-container {
+  position: relative;
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+}
+
+.lf-aside .image-container .main-img {
+  border-radius: 30px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+.lf-aside .image-container .star {
+  position: absolute;
+  width: 250px;
+  top: -60px;
+  right: -60px;
+  z-index: 1;
+
+}
+.lf-aside .lf-text {
+  padding-left: 70px;
+}
+.lf-aside .lf-text ul {
+  font-size: 1.4em;
+  color: black;
+  font-weight: 400;  
+  margin-left: 20px;
+}
+.lf-aside .lf-text ul a{
+  color: inherit;
+  font-weight: 300;
+}
+
+
+@media (max-width: 600px) {
+  
+  .lf-aside {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lf-aside .image-container {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .lf-aside .lf-text {
+    margin-top: 40px;
+    padding-left: 0;
+  }
+
 }
