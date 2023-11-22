@@ -1198,8 +1198,9 @@ header nav  a {
 }
 
 .section-book-btn {
-  width: 500px;
+
   height: 80px;
+	width: 100%;
   font-size: large;
   text-align: left;
   background: white;
@@ -1210,20 +1211,40 @@ header nav  a {
 }
 @media (max-width: 1200px) {
   .section-book-btn {
-    width: 400px;
+
   }
 }
 @media (max-width: 950px) {
+  .section-book-btn b{
+	  display: block;
+  }
   .section-book-btn {
+	flex-direction: column;
+	 justify-content: center;
+	  align-items: center;
+
+
     height: 70px;
     margin-bottom: 30px;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
+
 .section-book-btn-3 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+
+@media (min-width: 950px) {
+  .section-book-btn b{
+	  display: block;
+  }
+  .section-book-btn {
+    height: 70px;
+    margin-bottom: 30px;
+    font-size: 1.7rem;
+  }
 }
 
 .section-book-star {
@@ -1284,21 +1305,19 @@ header nav  a {
 }
 
 .section-book-social-img{
-  height: 30px;
-  margin-left: 20px;
+  height: 20px;
 }
 
 .section-book .social{
   display: flex;
   align-content: center;
-  margin-right: -10px;
 }
 
 .section-book .social a{
   display: flex;
   align-content: center;
   justify-content: center;
-  width: 50px;
+  width: 30px;
 }
 
 .lf-title-bar{ 
