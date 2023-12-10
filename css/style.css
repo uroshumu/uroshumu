@@ -17,6 +17,8 @@ ORDER: Base + typography > general layout (header, footer, navigation) + grid > 
 
 1em=16px */
 
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
 *,
 *::after,
 *::before {
@@ -257,7 +259,7 @@ main.visible-nav::before{
   justify-items: center;
   height: 1000px;
   display: grid;
-  grid-template-columns: 39% 1fr;
+  grid-template-columns: 50% 1fr;
   position: relative;
   z-index: 1;
 }
@@ -331,6 +333,22 @@ main.visible-nav::before{
     font-size: 4rem;
   }
 }
+
+
+.section-welcome-p i span{
+  display: none;
+}
+
+.section-welcome-p i{
+  background-image: url("../img/motel.svg");
+  width: 2.4em;
+  height: 1em;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: -0.11em;
+}
+
 .section-welcome-btn {
   background: white;
   position: relative;
@@ -341,7 +359,25 @@ main.visible-nav::before{
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 300px;
 }
+
+
+@media (max-width: 680px) {
+  .section-welcome-btn {
+    background: white;
+    position: relative;
+    font-size: 2rem;
+    height: 60px;
+    font-family: "Codec Pro";
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
 .section-welcome-right {
   width: 100%;
   height: 100%;
@@ -471,6 +507,22 @@ main.visible-nav::before{
     padding-bottom: 50px;
   }
 }
+
+nav .button {
+  height: 30px;
+  border-radius: 15px;
+  padding: 0 15px;
+  background: #264653;
+  display: flex;
+  align-items: center;
+  color: white !important;
+  margin-left: 15px;
+} 
+
+nav a {
+  line-height: 1em;
+}
+
 header {
   position: fixed;
   z-index: 1000;
@@ -493,7 +545,7 @@ header .wrap {
   padding: 20px 0;
 }
 header nav {
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -1454,6 +1506,15 @@ header nav  a {
 .lf-row .col {
   text-align: center;
   text-decoration: none;
+}
+
+.lf-row a {
+  text-decoration: none;
+}
+
+.lf-row p a {
+  font-weight: 400;
+  color: #2a9d8f;
 }
 
 .lf-row .col .title{
